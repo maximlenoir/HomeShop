@@ -6,6 +6,10 @@ public class Bill {
     private Customer customer;
     private Map<Product, Integer> products;
 
+    public Bill(Customer customer) {
+        this.customer = customer;
+    }
+
     public Customer getCustomer() {
         return this.customer;
     }
