@@ -25,7 +25,7 @@ public class Product {
      * Display the full description of the product.
      */
     public void look() {
-
+        System.out.printf(this.name + " : " + this.price + "%n" + this.description);
     }
 
     /**
