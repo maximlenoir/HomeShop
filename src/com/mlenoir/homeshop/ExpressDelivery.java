@@ -8,6 +8,11 @@ public class ExpressDelivery implements Delivery {
     }
 
     @Override
+    public String getInfo() {
+        return "Livraison à domicile express 24h";
+    }
+
+    @Override
     public double getPrice() {
         double price = 9.99d;
 
