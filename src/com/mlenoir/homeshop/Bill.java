@@ -21,6 +21,16 @@ public class Bill {
     }
 
     /**
+     * Get the total price for the current bill,
+     * including products and delivery cost.
+     *
+     * @return The total price.
+     */
+    public double getTotal() {
+        return 0.0d;
+    }
+
+    /**
      * Add a product with a quantity in the bill.
      *
      * @param product  The product to add.
@@ -28,5 +38,14 @@ public class Bill {
      */
     public void addProduct(Product product, Integer quantity) {
         this.products.put(product, quantity);
+    }
+
+    /**
+     * Generate an output for the current bill.
+     *
+     * @param writer The writer object in charge to writing.
+     */
+    public void generate(Writer writer) {
+
     }
 }
