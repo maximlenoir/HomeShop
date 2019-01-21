@@ -1,5 +1,6 @@
 package com.mlenoir.homeshop;
 
+import java.util.HashMap;
 import java.util.Map;
 
 public class Bill {
@@ -10,6 +11,8 @@ public class Bill {
     public Bill(Customer customer, Delivery delivery) {
         this.customer = customer;
         this.delivery = delivery;
+
+        this.products = new HashMap<>();
     }
 
     public Customer getCustomer() {
@@ -27,7 +30,18 @@ public class Bill {
      * @return The total price.
      */
     public double getTotal() {
-        return 0.0d;
+        double total = 0.0d;
+
+        for (Map.Entry<Product, Integer> entry : this.products.entrySet()) {
+            Product product = entry.getKey();
+            Integer quantity = entry.getValue();
+
+            total += product.getPrice() * quantity;
+        }
+
+        total += this.delivery.getPrice();
+
+        return total;
     }
 
     /**
