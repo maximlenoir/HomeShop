@@ -73,4 +73,11 @@ public class BillTest {
         assertEquals("Livraison : 2.99€", outputLines[17]);
         assertEquals("Total : 681.98€", outputLines[19]);
     }
+
+    @Test
+    public void Given_EmptyProductList_When_GeneratingBill_Then_ThrowsException() {
+        Bill bill = new Bill(this.customer, this.lowCostDelivery);
+
+        assertThrows(NoProductInBillException.class, () -> bill.generate(this.writerMock));
+    }
 }

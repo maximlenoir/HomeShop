@@ -58,8 +58,14 @@ public class Bill {
      * Generate an output for the current bill.
      *
      * @param writer The writer object in charge to writing.
+     *
+     * @throws NoProductInBillException if there is no product in bill.
      */
     public void generate(Writer writer) {
+        if (this.products.isEmpty()) {
+            throw new NoProductInBillException();
+        }
+
         writer.start();
 
         writer.writeLine("HomeShop compagnie");
