@@ -19,4 +19,9 @@
         <servlet-class>com.mlenoir.homeshop.web.BillServlet</servlet-class>
     </servlet>
 
+    <servlet-mapping>
+        <servlet-name>Bill</servlet-name>
+        <url-pattern>/bill</url-pattern>
+    </servlet-mapping>
+
 </web-app>
