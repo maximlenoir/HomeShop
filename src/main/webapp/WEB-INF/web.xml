@@ -7,5 +7,10 @@
         <servlet-name>HelloWorld</servlet-name>
         <servlet-class>com.mlenoir.homeshop.web.HelloWorldServlet</servlet-class>
     </servlet>
-    
+
+    <servlet-mapping>
+        <servlet-name>HelloWorld</servlet-name>
+        <url-pattern>/test</url-pattern>
+    </servlet-mapping>
+
 </web-app>
